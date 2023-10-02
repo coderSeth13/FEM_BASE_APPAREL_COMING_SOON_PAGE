@@ -1,0 +1,258 @@
+:root {
+  --clr-primary-hsl-300: 0, 36%, 70%;
+  --clr-primary-hsl-600: 0, 93%, 68%;
+
+  --clr-secondary-hsl-100: 0, 0%, 100%;
+  --clr-secondary-hsl-200: 0, 100%, 98%;
+  --clr-secondary-hsl-400: 0, 80%, 86%;
+  --clr-secondary-hsl-500: 0, 74%, 74%;
+
+  --clr-primary-300: hsl(var(--clr-primary-hsl-300));
+  --clr-primary-600: hsl(var(--clr-primary-hsl-600));
+
+  --clr-secondary-100: hsl(var(--clr-secondary-hsl-100));
+  --clr-secondary-200: hsl(var(--clr-secondary-hsl-200));
+  --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+  --clr-secondary-500: hsl(var(--clr-secondary-hsl-500));
+
+  --clr-accent-1: hsl(0, 6%, 24%);
+
+  --primary-gradient: linear-gradient(
+    135deg,
+    var(--clr-secondary-100),
+    var(--clr-secondary-200)
+  );
+
+  --secondary-gradient: linear-gradient(
+    135deg,
+    var(--clr-secondary-400),
+    var(--clr-secondary-500)
+  );
+
+  --ff-primary: "Josefin Sans", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --fs-100: 1rem;
+  --fs-200: 2.5rem;
+
+  --size-100: 0.7rem;
+  --size-200: ;
+  --size-300: 1rem;
+  --size-400: ;
+  --size-500: ;
+
+  /* Tokens */
+
+  --clr-body: var(--clr-primary-300);
+  --clr-bg-btn: var(--secondary-gradient);
+  --clr-bg-btn-hover: hsl(var(--clr-secondary-hsl-400), 0.9);
+  --clr-heading: var(--clr-primary-300);
+
+  --ff-body: var(--ff-primary);
+
+  --fw-body: var(--fw-regular);
+  --fw-heading: var(--fw-regular);
+
+  --fs-body: var(--fs-100);
+  --fs-heading: var(--fs-200);
+}
+
+/* Reset Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* General Styles */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  color: var(--clr-body);
+}
+
+.hero__content .container {
+  max-width: 22rem;
+}
+
+.heading-1 {
+  color: var(--clr-heading);
+  font-size: var(--fs-heading);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-heading);
+  letter-spacing: var(--size-100);
+  text-transform: uppercase;
+  max-width: 10ch;
+}
+
+.heading-1 span {
+  color: var(--clr-accent-1);
+  font-weight: var(--fw-semi-bold);
+}
+
+.hero__main-text {
+  line-height: 1.5;
+  margin-block: 2rem;
+}
+
+.form__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100vw;
+  padding-left: 0.5rem;
+  outline: 1px solid var(--clr-primary-300);
+}
+
+.form__input {
+  outline: none;
+  border: none;
+  color: var(--clr-accent-1);
+  width: 100%;
+  padding: 1rem;
+}
+
+.form__input:focus,
+.form__input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.form__submit-btn {
+  border: none;
+  outline: none;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  width: 5rem;
+  border-radius: 100vw;
+  cursor: pointer;
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  color: var(--clr-btn);
+  background: var(--clr-bg-btn);
+}
+
+.form__submit-btn:hover,
+.form__submit-btn:focus-visible {
+  border: none;
+  outline: none;
+  background: var(--clr-bg-btn-hover);
+  box-shadow: 0.1rem 0.3rem 1.5rem hsl(var(--clr-primary-hsl-300), 0.8);
+}
+
+/* Utilities */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap {
+  gap: var(--size-200, 1rem);
+}
+
+/* Small screen widths */
+
+@media (max-width: 900px) {
+  body {
+    display: grid;
+    justify-items: center;
+    min-height: 100vh;
+  }
+
+  .align-center {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .header {
+    margin-block: 2rem;
+  }
+
+  .header__img-wrapper {
+    max-width: 7rem;
+    margin-inline: 2rem;
+  }
+
+  .hero__img-wrapper img {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero__content {
+    padding-inline: 1rem;
+    padding-block: 4rem;
+  }
+}
+
+/* Big screen widths */
+
+@media (min-width: 900px) {
+  main {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header hero__image"
+      "hero__content hero__image";
+  }
+
+  .header {
+    grid-area: header;
+    align-self: center;
+  }
+
+  .header .container {
+    margin-inline-start: 4rem;
+  }
+
+  .hero__image {
+    grid-area: hero__image;
+    justify-self: end;
+  }
+
+  .hero__img-wrapper {
+    max-width: 76vh;
+  }
+
+  .hero__content {
+    grid-area: hero__content;
+  }
+
+  .hero__content .container {
+    margin-inline-start: 4rem;
+    max-width: 30rem;
+  }
+}

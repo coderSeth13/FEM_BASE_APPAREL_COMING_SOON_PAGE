@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="coder Seth" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+
+    <title>Base Apparel coming soon page</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS  link-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <div class="container">
+          <div class="header__img-wrapper">
+            <img src="images/logo.svg" alt="Base Apparel logo " />
+          </div>
+        </div>
+      </section>
+
+      <section class="hero__image">
+        <div class="hero__img-wrapper">
+          <picture>
+            <source
+              media="(max-width: 900px)"
+              srcset="images/hero-mobile.jpg"
+            />
+            <img src="images/hero-desktop.jpg" alt="A welcoming lady" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="hero__content | align-center">
+        <div class="container">
+          <h1 class="heading-1 | align-center">
+            We're <span>coming soon</span>
+          </h1>
+
+          <p class="hero__main-text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <form action="#" class="form">
+            <div class="form__group">
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Email Address"
+              />
+              <button class="form__submit-btn">
+                <img src="images/icon-arrow.svg" alt="" />
+              </button>
+            </div>
+            <p class="form__error"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- <div class="coderSeth">Coded by <a href="#">coderSeth</a>.</div> -->
+    </main>
+  </body>
+</html>
