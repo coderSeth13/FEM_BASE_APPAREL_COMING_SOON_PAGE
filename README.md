@@ -4,7 +4,7 @@
 
 #### Project links
 
-- Solution URL:
+- Solution URL: https://github.com/coderSeth13/FEM_BASE_APPAREL_COMING_SOON_PAGE.git
 - Live Site URL:
 
 #### Social links
@@ -15,3 +15,4 @@
 - Github: https://github.com/coderSeth13?tab=repositories
 
 ### Screenshot
+![Screen Shot 2023-10-03 at 09 41 44](https://github.com/coderSeth13/FEM_BASE_APPAREL_COMING_SOON_PAGE/assets/145410639/aa6ef808-3c63-4d33-b5ba-dc9c63c32775)
