@@ -27,6 +27,9 @@
 
     <!-- CSS  link-->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Js link -->
+    <script src="main.js" defer></script>
   </head>
   <body>
     <main>
@@ -70,12 +73,13 @@
                 class="form__input"
                 type="text"
                 placeholder="Email Address"
+                data-email-input-js
               />
-              <button class="form__submit-btn | grid">
+              <button class="form__submit-btn | grid" data-submit-btn-js>
                 <img src="images/icon-arrow.svg" alt="" />
               </button>
             </div>
-            <p class="form__error"></p>
+            <p class="form__error" data-error-text-js></p>
           </form>
         </div>
       </section>
