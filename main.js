@@ -1,26 +1,21 @@
 //   Fetch the input, error and button elements
-
 const emailInputEl = document.querySelector("[data-email-input-js]"),
   submitBtnEl = document.querySelector("[data-submit-btn-js]"),
   errorText = document.querySelector("[data-error-text-js]");
 
 //  Error Function
-
 const error = (errorMessage) => {
   emailInputEl.classList.add("error");
-  errorText.classList.add("error-text");
   errorText.textContent = errorMessage;
 };
 
 //  Success Function
-
 const success = (errorMessage) => {
   emailInputEl.classList.add("success");
   errorText.textContent = errorMessage;
 };
 
 //   Validate the email value
-
 const emailValidate = () => {
   const email = emailInputEl.value.trim();
   const validEmail =
@@ -35,8 +30,7 @@ const emailValidate = () => {
   }
 };
 
-// Call the validate on clicking a button
-
+// Validate Emall on click
 submitBtnEl.addEventListener("click", (e) => {
   e.preventDefault();
 

@@ -43,10 +43,7 @@
   --fs-200: 2.5rem;
 
   --size-100: 0.7rem;
-  --size-200: ;
   --size-300: 1rem;
-  --size-400: ;
-  --size-500: ;
 
   /* Tokens */
 
@@ -188,6 +185,14 @@ body {
   outline: none;
 }
 
+.form__error {
+  font-weight: var(--fw-regular);
+  margin-block-start: 0.5rem;
+  margin-inline-start: 1.5rem;
+  color: hsl(var(--clr-primary-hsl-600));
+  text-align: end;
+}
+
 /* Error toggle Js Classes */
 
 .error {
@@ -204,17 +209,14 @@ body {
   background-position: 14.5rem center;
 }
 
-.form__error {
-  font-weight: var(--fw-regular);
-  margin-block-start: 0.5rem;
-  margin-inline-start: 1.5rem;
-}
-
-.error-text {
-  color: hsl(var(--clr-primary-hsl-600));
-}
-
 /* Small screen widths */
+
+@media (max-width: 350px) {
+  .error,
+  .success {
+    background-position: 68% center;
+  }
+}
 
 @media (max-width: 900px) {
   body {
@@ -307,6 +309,13 @@ body {
 
   .success {
     background-position: 80% center;
+  }
+}
+
+@media screen and (900px <= width <= 1100px) {
+  .error,
+  .success {
+    background-position: 75% center;
   }
 }
 
