@@ -4,28 +4,39 @@ const emailInputEl = document.querySelector("[data-email-input-js]"),
   submitBtnEl = document.querySelector("[data-submit-btn-js]"),
   errorText = document.querySelector("[data-error-text-js]");
 
+//  Error Function
+
+const error = (errorMessage) => {
+  emailInputEl.classList.add("error");
+  errorText.classList.add("error-text");
+  errorText.textContent = errorMessage;
+};
+
+//  Success Function
+
+const success = (errorMessage) => {
+  emailInputEl.classList.add("success");
+  errorText.textContent = errorMessage;
+};
+
 //   Validate the email value
 
 const emailValidate = () => {
   const email = emailInputEl.value.trim();
-  const validRegex =
+  const validEmail =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   if (email === "") {
-    emailInputEl.classList.add("error");
-    errorText.classList.add("error-text");
-    errorText.textContent = "Email can't be empty";
-  } else if (!email.match(validRegex)) {
-    emailInputEl.classList.add("error");
-    errorText.classList.add("error-text");
-    errorText.textContent = "Enter a valid email";
+    error("Email can't be empty");
+  } else if (!email.match(validEmail)) {
+    error("Enter a valid email");
   } else {
-    emailInputEl.classList.add("success");
-    errorText.classList.add("success-text");
+    success();
   }
 };
 
-//   Validating form on button click
+// Call the validate on clicking a button
+
 submitBtnEl.addEventListener("click", (e) => {
   e.preventDefault();
 

@@ -168,7 +168,7 @@ body {
   background: var(--clr-bg-btn);
   color: var(--clr-btn);
 
-  padding: 1rem;
+  padding: 1rem 0.2rem;
   border-radius: 100vw;
   width: 5rem;
 
@@ -189,32 +189,29 @@ body {
 }
 
 /* Error toggle Js Classes */
+
 .error {
   border-color: hsl(var(--clr-primary-hsl-600));
   background-image: url(images/icon-error.svg);
   background-repeat: no-repeat;
-  background-position: 20rem center;
+  background-position: 14.5rem center;
 }
 
 .success {
   border-color: hsl(var(--clr-accent-hsl-2));
   background-image: url(images/icon-success.svg);
   background-repeat: no-repeat;
-  background-position: 20rem center;
+  background-position: 14.5rem center;
 }
 
 .form__error {
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
   margin-block-start: 0.5rem;
   margin-inline-start: 1.5rem;
 }
 
 .error-text {
   color: hsl(var(--clr-primary-hsl-600));
-}
-
-.success-text {
-  color: hsl(var(--clr-accent-hsl-2));
 }
 
 /* Small screen widths */
@@ -302,6 +299,14 @@ body {
   .hero__content .container {
     margin-inline-start: 5rem;
     max-width: 30rem;
+  }
+
+  .error {
+    background-position: 80% center;
+  }
+
+  .success {
+    background-position: 80% center;
   }
 }
 
